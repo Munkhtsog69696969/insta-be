@@ -8,7 +8,7 @@ authRouter
     .get("/google" , passport.authenticate("google" , {scope:["profile"]}))
     .get("/google/callback" , passport.authenticate("google" , {
         successRedirect:"http://localhost:3000",
-        failureRedirect:"/login/failed"
+        failureRedirect:"https://insta-be-vm35.onrender.com/auth/login/failure"
     }))
     .get("/login/success",(req,res)=>{
         if(req.user){
