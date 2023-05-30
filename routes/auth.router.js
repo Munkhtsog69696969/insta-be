@@ -7,8 +7,8 @@ const authRouter = express.Router();
 authRouter
     .get("/google" , passport.authenticate("google" , {scope:["profile"]}))
     .get("/google/callback" , passport.authenticate("google" , {
-        successRedirect:"http://localhost:3000/",
-        failureRedirect:"http://localhost:3000"
+        successRedirect:"http://localhost:3000",
+        failureRedirect:"/login/failed"
     }))
     .get("/login/success",(req,res)=>{
         if(req.user){
