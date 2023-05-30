@@ -12,9 +12,9 @@ authRouter
     }))
     .get("/login/success",(req,res)=>{
         if(req.user){
-            res.status(200).json({
+            res.status(200).json({ 
                 message:"Success",
-                user:req.user
+                // user:req.user
             })
         }
     })
