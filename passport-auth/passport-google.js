@@ -8,7 +8,7 @@ const GOOGLE_CLIENT_SECRET="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"
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:6000/auth/google/callback"
+    callbackURL: "https://insta-be-vm35.onrender.com/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     done(null , profile);
