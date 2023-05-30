@@ -16,7 +16,7 @@ connect();
 
 
 app.use(express.json({limit:"50mb"}));
-app.use(session({secret:"Net"}))
+app.use(session({secret:"Net"}));
 app.use(cors());
 // app.use(
 //     cookieSession({
