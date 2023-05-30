@@ -4,7 +4,7 @@ const cors=require("cors");
 require("dotenv").config();
 
 const passport=require("passport");
-const passportSetup=require("./passport-auth/passport-google");
+require("./passport-auth/passport-google");
 const cookieSession=require("cookie-session");
 const mongoose=require("mongoose");
 const app=express();
